@@ -1,0 +1,12 @@
+#border-video {
+  border-style: solid;
+  border-width: thick;
+  border-color: green;
+  border-radius: 15px;   
+}
+
+.border-image {
+  border-style: solid;
+  border-width: medium;
+  border-color: green;
+}
