@@ -10,3 +10,38 @@
   border-width: medium;
   border-color: green;
 }
+
+.header-logo {
+  text-decoration: none;
+}
+
+a:visited {
+  color:rgb(0, 81, 255)
+}
+
+
+a:link {
+  color: #db9c37;
+}
+
+a:active {
+  background-color: rgb(255, 0, 76);
+}
+
+a:hover {
+  border: 3px solid rgb(136, 59, 59)
+
+}
+
+nav>a {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header h1 {
+  border: 15px solid rgb(13, 175, 13);
+
+}
+  header+p {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}
+
