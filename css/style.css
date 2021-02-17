@@ -52,7 +52,7 @@ header h1 {
 
 .gridContainer {
   display: grid;
-  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-template-rows: 2fr 2fr;
   gap: 30px;
   align-items: center;
@@ -324,3 +324,25 @@ header {
   transform: rotateX(900deg);
 }
 
+.mobileColor {
+  background: orange;
+}
+
+@media only screen and (min-width: 650px) {
+  header {
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCvV2xdsmjTNBi4dD2Elw5XcnFry4DiMeKvA&usqp=CAU);
+    }
+  .mobileColor {
+    background:palegreen;
+  }
+}
+
+@media only screen and (min-width: 1000px){
+  header {
+    background: red;
+  }
+  .mobileColor {
+    background: rgb(50, 160, 50);
+  }
+
+}
