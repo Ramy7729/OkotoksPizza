@@ -1,0 +1,338 @@
+$backColor: #F3D8A6;
+$backColorTwo: #78B83A;
+
+@import '_header.scss';
+@import '_footer.scss';
+
+@mixin videoStretch() {
+  transition: all 0.5s linear;
+}
+
+iframe:hover {
+  @include videoStretch();
+  width: 1000px;
+
+  &#border-video {
+    border: solid 15px green;
+  }
+
+}
+
+.border-image {
+  border-style: solid;
+  border-width: medium;
+  border-color: green;
+}
+
+a:visited {
+  color:rgb(0, 204, 255);
+}
+
+
+a:link {
+  color: #db9c37;
+}
+
+a:active {
+  background-color: rgb(255, 0, 76);
+}
+
+a:hover {
+  border: 3px solid rgb(136, 59, 59);
+
+}
+
+nav>a {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: 2fr 2fr;
+  gap: 30px;
+  align-items: center;
+  justify-items: center;
+}
+
+div {
+  height: 60px;
+  width: 50%;
+  background: chartreuse;
+  border-radius: 30%;
+  position: relative;
+  text-align: center;
+}
+
+#rectangle2 {
+  height: 60px;
+  width: 50%;
+  background: chartreuse;
+  border-radius: 30%;
+  position: relative;
+  text-align: center;
+}
+
+#blockyBlock {
+  animation-name: iamBlock;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes iamBlock {
+  0% {background:yellowgreen; top: 0px; left: 0px;}
+  30% {background: #8a0303; top: 50px; left: 50px;}
+  50% {background:rgb(245, 64, 236);}
+}
+
+.drakePizza:hover {
+  height: 1000px;
+  background-image: url(https://static.coindesk.com/wp-content/uploads/2021/02/EtkW62iVcAEmi7E-828x628.jpeg);
+}
+
+.font {
+  font-size: 3rem;
+  font-family: Comic Sans MS, sans-serif;
+}
+
+.colorNeon {
+  background: #FAED27;
+}
+
+.container {
+  position: absolute;
+  width: 100%;
+}
+
+.pizzaDrake {
+  position: absolute;
+  width: 100px;
+  left: 18%;
+  animation: Drake 1s ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes Drake {
+  50% {transform: translateX(100%);}
+}
+
+.doggoContainer {
+  height: 500PX;
+  width: 500px;
+  background: url(https://media0.giphy.com/media/aFTt8wvDtqKCQ/giphy.gif?cid=ecf05e47fsva1sv4y0mtvw9r9xio86otgi4ybsnt0t0ul88j&rid=giphy.gif);
+  position: absolute;
+  right:200px;
+  top: 300px;
+  border: 5px solid orange;
+  border-radius: 30%;
+  transition: all 1s ease out;
+}
+
+.doggoContainer:hover {
+  width: 2000px;
+  transform: rotate(30deg);
+}
+
+.bigCircle {
+  background: green;
+  border-radius: 50%;
+  height: 800px;
+  width: 800px;
+  position: absolute;
+  top: 0;
+  animation: flashCircle 1s infinite;
+  z-index: -1;
+}
+
+@keyframes flashCircle {
+  0% {background: coral;}
+  25% {background: cyan;}
+  50% {background: yellow;}
+  75% {background: brown;}
+  100% {background: beige;}
+}
+  
+.circle2 {
+  background: green;
+  border-radius: 2% 50%;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 0px;
+  animation: flashCircle2 1s infinite;
+}
+
+@keyframes flashCircle2 {
+  0% {background: coral;}
+  25% {background: cyan;}
+  50% {background: green;}
+  75% {background: brown;}
+  100% {background: beige;}
+}
+  
+.bigcircle3 {
+  background: green;
+  border-radius: 50%;
+  height: 800px;
+  width: 800px;
+  position: absolute;
+  top: 40px;
+  right: 60px;
+  animation: flashCircle3 1s infinite;
+  z-index: -1;
+}
+
+@keyframes flashCircle3 {
+  0% {background: coral;}
+  25% {background: cyan;}
+  50% {background: yellow;}
+  75% {background: brown;}
+  100% {background: beige;}
+}
+
+@keyframes flashCircle4 {
+  0% {background: coral;}
+  25% {background: cyan;}
+  50% {background: yellow;}
+  75% {background: brown;}
+  100% {background: beige;}
+}
+ 
+.circle4 {
+  background: green;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 60px;
+  animation: flashCircle4 1s infinite;
+}
+
+@keyframes flashCircle4 {
+  0% {background: coral;}
+  25% {background: cyan;}
+  50% {background: yellow;}
+  75% {background: brown;}
+  100% {background: beige;}
+}
+ 
+.circle5 {
+  background: green;
+  border-radius: 50% 2%;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 300px;
+  animation: flashCircle5 1s infinite;
+}
+
+@keyframes flashCircle5 {
+  0% {background: coral;}
+  25% {background: cyan;}
+  50% {background: purple;}
+  75% {background: brown;}
+  100% {background: beige;}
+}
+ 
+.circle6 {
+  background: green;
+  border-radius: 2% 50%;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 600px;
+  animation: flashCircle6 1s infinite;
+}
+
+@keyframes flashCircle6 {
+  0% {background: coral;}
+  25% {background: cyan;}
+  50% {background: rgb(53, 92, 175);}
+  75% {background: brown;}
+  100% {background: beige;}
+}
+
+.circle7 {
+  background: green;
+  border-radius: 50% 2%;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 1200px;
+  animation: flashCircle7 1s infinite;
+}
+
+@keyframes flashCircle7 {
+  0% {background: coral;}
+  25% {background: cyan;}
+  50% {background:rgb(3, 29, 4);}
+  75% {background: brown;}
+  100% {background: beige;}
+}
+
+.circle8 {
+  background: green;
+  border-radius: 2% 50%;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 1500px;
+  animation: flashCircle8 1s infinite;
+}
+
+@keyframes flashCircle8 {
+  0% {background: coral;}
+  25% {background: cyan;}
+  50% {background: rgb(71, 231, 57);}
+  75% {background: brown;}
+  100% {background: beige;}
+}
+
+.circle9 {
+  background: green;
+  border-radius: 50% 2%;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 1780px;
+  animation: flashCircle9 1s infinite;
+}
+
+@keyframes flashCircle9 {
+  0% {background: coral;}
+  25% {background: cyan;}
+  50% {background: rgb(108, 10, 138);}
+  75% {background: brown;}
+  100% {background: beige;}
+}
+
+.reserveLogo {
+  transition: all 2s ease-in-out;
+}
+
+.reserveLogo:hover {
+  transform: rotateX(900deg);
+}
+
+.mobileColor {
+  background: orange;
+}
+
+@media only screen and (min-width: 650px) {
+  header {
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCvV2xdsmjTNBi4dD2Elw5XcnFry4DiMeKvA&usqp=CAU);
+    }
+  .mobileColor {
+    background:palegreen;
+  }
+}
+
+@media only screen and (min-width: 1000px){
+  header {
+    background: $backColorTwo;
+  }
+  .mobileColor {
+    background: rgb(50, 160, 50);
+  }
+
+}

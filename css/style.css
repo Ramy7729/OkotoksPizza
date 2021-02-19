@@ -1,13 +1,44 @@
-.footerBottom {
-  position: absolute;
-  bottom: 0;
+.header-logo {
+  text-decoration: none;
 }
 
-#border-video {
-  border-style: solid;
-  border-width: thick;
-  border-color: green;
-  border-radius: 15px;   
+header {
+  background: #78B83A;
+  padding: 50px;
+}
+
+header h1 {
+  border: 15px solid #0daf0d;
+}
+
+header + p {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.colorHeader {
+  background-color: #F3D8A6;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+}
+
+.footerContainer {
+  min-height: 100%;
+  position: relative;
+}
+
+iframe:hover {
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  width: 1000px;
+}
+
+iframe:hover#border-video {
+  border: solid 15px green;
 }
 
 .border-image {
@@ -16,46 +47,37 @@
   border-color: green;
 }
 
-.header-logo {
-  text-decoration: none;
-}
-
 a:visited {
-  color:rgb(0, 204, 255);
+  color: #00ccff;
 }
-
 
 a:link {
   color: #db9c37;
 }
 
 a:active {
-  background-color: rgb(255, 0, 76);
+  background-color: #ff004c;
 }
 
 a:hover {
-  border: 3px solid rgb(136, 59, 59);
-
+  border: 3px solid #883b3b;
 }
 
-nav>a {
+nav > a {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-header h1 {
-  border: 15px solid rgb(13, 175, 13);
-
-}
-  header+p {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
 .gridContainer {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-template-rows: 2fr 2fr;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  -ms-grid-rows: 2fr 2fr;
+      grid-template-rows: 2fr 2fr;
   gap: 30px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   justify-items: center;
 }
 
@@ -78,15 +100,44 @@ div {
 }
 
 #blockyBlock {
-  animation-name: iamBlock;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
+  -webkit-animation-name: iamBlock;
+          animation-name: iamBlock;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes iamBlock {
+  0% {
+    background: yellowgreen;
+    top: 0px;
+    left: 0px;
+  }
+  30% {
+    background: #8a0303;
+    top: 50px;
+    left: 50px;
+  }
+  50% {
+    background: #f540ec;
+  }
 }
 
 @keyframes iamBlock {
-  0% {background:yellowgreen; top: 0px; left: 0px;}
-  30% {background: #8a0303; top: 50px; left: 50px;}
-  50% {background:rgb(245, 64, 236);}
+  0% {
+    background: yellowgreen;
+    top: 0px;
+    left: 0px;
+  }
+  30% {
+    background: #8a0303;
+    top: 50px;
+    left: 50px;
+  }
+  50% {
+    background: #f540ec;
+  }
 }
 
 .drakePizza:hover {
@@ -112,12 +163,24 @@ div {
   position: absolute;
   width: 100px;
   left: 18%;
-  animation: Drake 1s ease-in-out;
-  animation-iteration-count: infinite;
+  -webkit-animation: Drake 1s ease-in-out;
+          animation: Drake 1s ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes Drake {
+  50% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
 }
 
 @keyframes Drake {
-  50% {transform: translateX(100%);}
+  50% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
 }
 
 .doggoContainer {
@@ -125,22 +188,18 @@ div {
   width: 500px;
   background: url(https://media0.giphy.com/media/aFTt8wvDtqKCQ/giphy.gif?cid=ecf05e47fsva1sv4y0mtvw9r9xio86otgi4ybsnt0t0ul88j&rid=giphy.gif);
   position: absolute;
-  right:200px;
+  right: 200px;
   top: 300px;
   border: 5px solid orange;
   border-radius: 30%;
+  -webkit-transition: all 1s ease out;
   transition: all 1s ease out;
 }
 
 .doggoContainer:hover {
   width: 2000px;
-  transform: rotate(30deg);
-}
-
-header {
-  background: red;
-  padding: 50px;
-  position: relative;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
 }
 
 .bigCircle {
@@ -150,18 +209,47 @@ header {
   width: 800px;
   position: absolute;
   top: 0;
-  animation: flashCircle 1s infinite;
+  -webkit-animation: flashCircle 1s infinite;
+          animation: flashCircle 1s infinite;
   z-index: -1;
 }
 
-@keyframes flashCircle {
-  0% {background: coral;}
-  25% {background: cyan;}
-  50% {background: yellow;}
-  75% {background: brown;}
-  100% {background: beige;}
+@-webkit-keyframes flashCircle {
+  0% {
+    background: coral;
+  }
+  25% {
+    background: cyan;
+  }
+  50% {
+    background: yellow;
+  }
+  75% {
+    background: brown;
+  }
+  100% {
+    background: beige;
+  }
 }
-  
+
+@keyframes flashCircle {
+  0% {
+    background: coral;
+  }
+  25% {
+    background: cyan;
+  }
+  50% {
+    background: yellow;
+  }
+  75% {
+    background: brown;
+  }
+  100% {
+    background: beige;
+  }
+}
+
 .circle2 {
   background: green;
   border-radius: 2% 50%;
@@ -169,17 +257,46 @@ header {
   width: 100px;
   position: absolute;
   left: 0px;
-  animation: flashCircle2 1s infinite;
+  -webkit-animation: flashCircle2 1s infinite;
+          animation: flashCircle2 1s infinite;
+}
+
+@-webkit-keyframes flashCircle2 {
+  0% {
+    background: coral;
+  }
+  25% {
+    background: cyan;
+  }
+  50% {
+    background: green;
+  }
+  75% {
+    background: brown;
+  }
+  100% {
+    background: beige;
+  }
 }
 
 @keyframes flashCircle2 {
-  0% {background: coral;}
-  25% {background: cyan;}
-  50% {background: green;}
-  75% {background: brown;}
-  100% {background: beige;}
+  0% {
+    background: coral;
+  }
+  25% {
+    background: cyan;
+  }
+  50% {
+    background: green;
+  }
+  75% {
+    background: brown;
+  }
+  100% {
+    background: beige;
+  }
 }
-  
+
 .bigcircle3 {
   background: green;
   border-radius: 50%;
@@ -188,26 +305,83 @@ header {
   position: absolute;
   top: 40px;
   right: 60px;
-  animation: flashCircle3 1s infinite;
+  -webkit-animation: flashCircle3 1s infinite;
+          animation: flashCircle3 1s infinite;
   z-index: -1;
 }
 
+@-webkit-keyframes flashCircle3 {
+  0% {
+    background: coral;
+  }
+  25% {
+    background: cyan;
+  }
+  50% {
+    background: yellow;
+  }
+  75% {
+    background: brown;
+  }
+  100% {
+    background: beige;
+  }
+}
+
 @keyframes flashCircle3 {
-  0% {background: coral;}
-  25% {background: cyan;}
-  50% {background: yellow;}
-  75% {background: brown;}
-  100% {background: beige;}
+  0% {
+    background: coral;
+  }
+  25% {
+    background: cyan;
+  }
+  50% {
+    background: yellow;
+  }
+  75% {
+    background: brown;
+  }
+  100% {
+    background: beige;
+  }
+}
+
+@-webkit-keyframes flashCircle4 {
+  0% {
+    background: coral;
+  }
+  25% {
+    background: cyan;
+  }
+  50% {
+    background: yellow;
+  }
+  75% {
+    background: brown;
+  }
+  100% {
+    background: beige;
+  }
 }
 
 @keyframes flashCircle4 {
-  0% {background: coral;}
-  25% {background: cyan;}
-  50% {background: yellow;}
-  75% {background: brown;}
-  100% {background: beige;}
+  0% {
+    background: coral;
+  }
+  25% {
+    background: cyan;
+  }
+  50% {
+    background: yellow;
+  }
+  75% {
+    background: brown;
+  }
+  100% {
+    background: beige;
+  }
 }
- 
+
 .circle4 {
   background: green;
   border-radius: 50%;
@@ -215,17 +389,28 @@ header {
   width: 100px;
   position: absolute;
   top: 60px;
-  animation: flashCircle4 1s infinite;
+  -webkit-animation: flashCircle4 1s infinite;
+          animation: flashCircle4 1s infinite;
 }
 
 @keyframes flashCircle4 {
-  0% {background: coral;}
-  25% {background: cyan;}
-  50% {background: yellow;}
-  75% {background: brown;}
-  100% {background: beige;}
+  0% {
+    background: coral;
+  }
+  25% {
+    background: cyan;
+  }
+  50% {
+    background: yellow;
+  }
+  75% {
+    background: brown;
+  }
+  100% {
+    background: beige;
+  }
 }
- 
+
 .circle5 {
   background: green;
   border-radius: 50% 2%;
@@ -233,17 +418,46 @@ header {
   width: 100px;
   position: absolute;
   left: 300px;
-  animation: flashCircle5 1s infinite;
+  -webkit-animation: flashCircle5 1s infinite;
+          animation: flashCircle5 1s infinite;
+}
+
+@-webkit-keyframes flashCircle5 {
+  0% {
+    background: coral;
+  }
+  25% {
+    background: cyan;
+  }
+  50% {
+    background: purple;
+  }
+  75% {
+    background: brown;
+  }
+  100% {
+    background: beige;
+  }
 }
 
 @keyframes flashCircle5 {
-  0% {background: coral;}
-  25% {background: cyan;}
-  50% {background: purple;}
-  75% {background: brown;}
-  100% {background: beige;}
+  0% {
+    background: coral;
+  }
+  25% {
+    background: cyan;
+  }
+  50% {
+    background: purple;
+  }
+  75% {
+    background: brown;
+  }
+  100% {
+    background: beige;
+  }
 }
- 
+
 .circle6 {
   background: green;
   border-radius: 2% 50%;
@@ -251,15 +465,44 @@ header {
   width: 100px;
   position: absolute;
   left: 600px;
-  animation: flashCircle6 1s infinite;
+  -webkit-animation: flashCircle6 1s infinite;
+          animation: flashCircle6 1s infinite;
+}
+
+@-webkit-keyframes flashCircle6 {
+  0% {
+    background: coral;
+  }
+  25% {
+    background: cyan;
+  }
+  50% {
+    background: #355caf;
+  }
+  75% {
+    background: brown;
+  }
+  100% {
+    background: beige;
+  }
 }
 
 @keyframes flashCircle6 {
-  0% {background: coral;}
-  25% {background: cyan;}
-  50% {background: rgb(53, 92, 175);}
-  75% {background: brown;}
-  100% {background: beige;}
+  0% {
+    background: coral;
+  }
+  25% {
+    background: cyan;
+  }
+  50% {
+    background: #355caf;
+  }
+  75% {
+    background: brown;
+  }
+  100% {
+    background: beige;
+  }
 }
 
 .circle7 {
@@ -269,15 +512,44 @@ header {
   width: 100px;
   position: absolute;
   left: 1200px;
-  animation: flashCircle7 1s infinite;
+  -webkit-animation: flashCircle7 1s infinite;
+          animation: flashCircle7 1s infinite;
+}
+
+@-webkit-keyframes flashCircle7 {
+  0% {
+    background: coral;
+  }
+  25% {
+    background: cyan;
+  }
+  50% {
+    background: #031d04;
+  }
+  75% {
+    background: brown;
+  }
+  100% {
+    background: beige;
+  }
 }
 
 @keyframes flashCircle7 {
-  0% {background: coral;}
-  25% {background: cyan;}
-  50% {background:rgb(3, 29, 4);}
-  75% {background: brown;}
-  100% {background: beige;}
+  0% {
+    background: coral;
+  }
+  25% {
+    background: cyan;
+  }
+  50% {
+    background: #031d04;
+  }
+  75% {
+    background: brown;
+  }
+  100% {
+    background: beige;
+  }
 }
 
 .circle8 {
@@ -287,15 +559,44 @@ header {
   width: 100px;
   position: absolute;
   left: 1500px;
-  animation: flashCircle8 1s infinite;
+  -webkit-animation: flashCircle8 1s infinite;
+          animation: flashCircle8 1s infinite;
+}
+
+@-webkit-keyframes flashCircle8 {
+  0% {
+    background: coral;
+  }
+  25% {
+    background: cyan;
+  }
+  50% {
+    background: #47e739;
+  }
+  75% {
+    background: brown;
+  }
+  100% {
+    background: beige;
+  }
 }
 
 @keyframes flashCircle8 {
-  0% {background: coral;}
-  25% {background: cyan;}
-  50% {background: rgb(71, 231, 57);}
-  75% {background: brown;}
-  100% {background: beige;}
+  0% {
+    background: coral;
+  }
+  25% {
+    background: cyan;
+  }
+  50% {
+    background: #47e739;
+  }
+  75% {
+    background: brown;
+  }
+  100% {
+    background: beige;
+  }
 }
 
 .circle9 {
@@ -305,23 +606,54 @@ header {
   width: 100px;
   position: absolute;
   left: 1780px;
-  animation: flashCircle9 1s infinite;
+  -webkit-animation: flashCircle9 1s infinite;
+          animation: flashCircle9 1s infinite;
+}
+
+@-webkit-keyframes flashCircle9 {
+  0% {
+    background: coral;
+  }
+  25% {
+    background: cyan;
+  }
+  50% {
+    background: #6c0a8a;
+  }
+  75% {
+    background: brown;
+  }
+  100% {
+    background: beige;
+  }
 }
 
 @keyframes flashCircle9 {
-  0% {background: coral;}
-  25% {background: cyan;}
-  50% {background: rgb(108, 10, 138);}
-  75% {background: brown;}
-  100% {background: beige;}
+  0% {
+    background: coral;
+  }
+  25% {
+    background: cyan;
+  }
+  50% {
+    background: #6c0a8a;
+  }
+  75% {
+    background: brown;
+  }
+  100% {
+    background: beige;
+  }
 }
 
 .reserveLogo {
+  -webkit-transition: all 2s ease-in-out;
   transition: all 2s ease-in-out;
 }
 
 .reserveLogo:hover {
-  transform: rotateX(900deg);
+  -webkit-transform: rotateX(900deg);
+          transform: rotateX(900deg);
 }
 
 .mobileColor {
@@ -331,18 +663,18 @@ header {
 @media only screen and (min-width: 650px) {
   header {
     background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCvV2xdsmjTNBi4dD2Elw5XcnFry4DiMeKvA&usqp=CAU);
-    }
+  }
   .mobileColor {
-    background:palegreen;
+    background: palegreen;
   }
 }
 
-@media only screen and (min-width: 1000px){
+@media only screen and (min-width: 1000px) {
   header {
-    background: red;
+    background: #78B83A;
   }
   .mobileColor {
-    background: rgb(50, 160, 50);
+    background: #32a032;
   }
-
 }
+/*# sourceMappingURL=style.css.map */
